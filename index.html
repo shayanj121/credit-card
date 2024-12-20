@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(139deg, rgba(34, 193, 195, 1) 0%, rgba(253, 235, 45, 1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+
+            >div {
+                width: 350px;
+                height: 400px;
+                background-color: rgb(235, 236, 237);
+                border-radius: 10px;
+                position: relative;
+                box-shadow: 0 0 20px 1px gray;
+                display: flex;
+                flex-wrap: wrap;
+
+                
+
+                        >.card {
+
+                            width: 300px;
+                            height: 200px;
+                            /* background-color: aqua; */
+                            position: absolute;
+                            top: -100px;
+                            right: 25px;
+                            border-radius: 10px;
+                            box-shadow: 0 0 20px .5px gray;
+                            background-image: linear-gradient(153deg, rgba(230, 115, 120, 1) 0%, rgba(90, 50, 102, 1) 76%);
+
+                            transition: .4s;
+
+
+                            >.head {
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                justify-content: space-between;
+
+                                >div {
+                                    height: 100%;
+                                    width: 50%;
+                                    display: flex;
+
+                                    &:first-of-type {
+                                        justify-content: flex-start;
+                                        object-fit: cover;
+                                        /* border: 1px solid rebeccapurple; */
+
+                                    }
+
+                                    &:last-of-type {
+                                        object-fit: cover;
+                                        /* border: 1px solid beige; */
+                                        justify-content: flex-end;
+                                        padding: 12px 12px;
+
+                                    }
+                                }
+                            }
+
+                            >.mid {
+                                width: 100%;
+                                height: 36.6666%;
+                                display: flex;
+                                gap: 12px;
+                                justify-content: center;
+                                align-items: center;
+
+                                >div {
+                                    /* border: 1px solid black; */
+                                    width: 20%;
+                                    height: 80%;
+                                    color: white;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                                    text-shadow: 0 0 2px black;
+                                }
+                            }
+
+                            >.bottom {
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                justify-content: space-between;
+
+                                >.expire {
+                                    width: 35%;
+                                    height: 100%;
+                                    /* border: 1px solid red; */
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+
+                                    >span {
+                                        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                                        color: rgb(228, 226, 226);
+                                        font-size: 10px;
+                                        text-transform: uppercase;
+                                        height: 50%;
+                                        width: 100%;
+                                        /* border: 1px solid blue; */
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        padding-top: 10px;
+
+                                    }
+
+                                    >p {
+                                        color: white;
+                                        font-size: 15px;
+                                        width: 13%;
+                                        height: 50%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        padding-bottom: 4px;
+                                        /* border: 1px solid red; */
+                                    }
+                                }
+
+                                >.cvv2 {
+                                    width: 35%;
+                                    height: 100%;
+                                    /* border: 1px solid red; */
+                                    display: flex;
+                                    flex-wrap: wrap;
+
+                                    >span {
+                                        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                                        color: rgb(228, 226, 226);
+                                        font-size: 10px;
+                                        text-transform: uppercase;
+                                        height: 50%;
+                                        width: 100%;
+                                        /* border: 1px solid blue; */
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        padding-top: 10px;
+
+                                    }
+
+                                    >p {
+                                        color: white;
+                                        font-size: 15px;
+                                        width: 100%;
+                                        height: 50%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        padding-bottom: 4px;
+                                    }
+                                }
+                            }
+                        }
+
+                        >.numb {
+                            width: 100%;
+                            height: 70px;
+                            /* border: 1px solid black; */
+                            margin-top: 120px;
+                            padding: 8px 20px;
+                            font-weight: lighter;
+                            font-size: 13px;
+                            text-transform: uppercase;
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            justify-content: center;
+                            align-items: center;
+
+
+                            >h4 {
+                                width: 100%;
+                                height: 30%;
+                                padding: 0 14px;
+                                text-shadow: 1px 1px 5px rgb(161, 155, 155);
+                            }
+
+                            >input {
+                                height: 40%;
+                                width: 20%;
+                                box-shadow: inset 0 0px 10px 4px hsla(0, 0%, 0%, 0.2);
+                                border: none;
+                                border-radius: 4px;
+                                text-align: center;
+
+                            }
+                        }
+
+                        >.exp {
+                            width: 50%;
+                            height: 70px;
+                            /* border: 1px solid black; */
+                            padding: 8px 20px;
+                            font-weight: lighter;
+                            font-size: 13px;
+                            text-transform: uppercase;
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            justify-content: center;
+                            align-items: center;
+
+                            >h4 {
+                                width: 100%;
+                                height: 30%;
+                                padding: 0 6px;
+                                text-shadow: 1px 1px 5px rgb(161, 155, 155);
+                            }
+
+                            >input {
+                                height: 40%;
+                                width: 40%;
+                                box-shadow: inset 0 0px 10px 4px hsla(0, 0%, 0%, 0.2);
+                                border: none;
+                                text-align: center;
+                                border-radius: 4px;
+                            }
+
+                        }
+
+                        >.cvv {
+                            width: 50%;
+                            height: 70px;
+                            /* border: 1px solid black; */
+                            padding: 8px 40px;
+                            font-weight: lighter;
+                            font-size: 13px;
+                            text-transform: uppercase;
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            justify-content: flex-end;
+                            align-items: center;
+
+                            >h4 {
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                justify-content: flex-end;
+                                padding: 0 6px;
+                                text-shadow: 1px 1px 5px rgb(161, 155, 155);
+
+                            }
+
+                            >input {
+                                height: 40%;
+                                width: 40%;
+                                box-shadow: inset 0 0px 10px 4px hsla(0, 0%, 0%, 0.2);
+                                border: none;
+                                border-radius: 4px;
+                                text-align: center;
+
+                            }
+
+                        }
+
+                        >.sub {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+
+                            >button {
+                                width: 300px;
+                                height: 40px;
+                                border: none;
+                                color: white;
+                                background-color: rgb(66, 138, 193);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 5px;
+                                box-shadow: 0 0 20px 1px rgba(108, 164, 241, 0.541);
+                                transition: .3s;
+
+                                &:hover {
+                                    background-color: rgb(16, 63, 134);
+                                }
+                            }
+
+
+
+                        }
+
+                    }
+                }
+
+            
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        
+                <div class="card front">
+                    <div class="head">
+                        <div><img src="img/shetab.png" alt=""></div>
+                        <div class="logo"><img src="" alt=""></div>
+                    </div>
+                    <div class="mid">
+                        <div class="d1"></div>
+                        <div class="d2"></div>
+                        <div class="d3"></div>
+                        <div class="d4"></div>
+                    </div>
+                    <div class="bottom">
+                        <div class="expire">
+                            <span>expires</span>
+                            <p></p>
+                            <p>/</p>
+                            <p></p>
+                        </div>
+                        <div class="cvv2">
+                            <span>cvv2</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+     
+
+        <div class="numb">
+            <h4>card number</h4>
+            <input type="text" maxlength="4">
+            <input type="text" maxlength="4">
+            <input type="text" maxlength="4">
+            <input type="text" maxlength="4">
+        </div>
+        <div class="exp">
+            <h4>expiration date</h4>
+            <input type="text" maxlength="2" placeholder="YY">
+            <input type="text" maxlength="2" placeholder="MM">
+        </div>
+        <div class="cvv">
+            <h4>cvv2</h4>
+            <input type="text" maxlength="4">
+        </div>
+        <div class="sub">
+            <button>SUBMIT</button>
+        </div>
+
+    </div>
+</body>
+<script>
+    const logo = document.querySelector('.logo>img')
+    const part1 = document.querySelector('.d1')
+    const part2 = document.querySelector('.d2')
+    const part3 = document.querySelector('.d3')
+    const part4 = document.querySelector('.d4')
+    const expCard = document.querySelectorAll('.expire>p')
+    const cvCard = document.querySelector('.cvv2>p')
+    const numb = document.querySelectorAll('.numb>input')
+    const exp = document.querySelectorAll('.exp>input')
+    const cvv = document.querySelector('.cvv>input')
+
+    numb.forEach((val, i) => {
+        val.addEventListener('keyup', (e) => {
+            let myKeyCode = e.keycode || e.which
+            if (myKeyCode == 8) {
+                if (val.value.length == 0) {
+                    if (i != 0) {
+
+                        val.previousElementSibling.focus()
+                    }
+                }
+            } else {
+                if (val.value.length >= 4) {
+                    val.value = val.value.slice(0, 4)
+                    if (i != 3) {
+                        val.nextElementSibling.focus()
+                    } else {
+                        exp[0].focus()
+                    }
+                }
+            }
+            if (i == 0) part1.textContent = val.value;
+            if (i == 1) part2.textContent = val.value;
+            if (i == 2) part3.textContent = val.value;
+            if (i == 3) part4.textContent = val.value;
+
+            const firstSix = getFirstSixDigits()
+
+            switch (firstSix) {
+                case '603799':
+                    logo.src = 'img/meli bank.png';
+                    break;
+                case '627412':
+                    logo.src = 'img/eqtesad novin.png';
+                    break;
+                case '621986':
+                    logo.src = 'img/saman.png';
+                    break;
+                case '610433':
+                    logo.src = 'img/melat.png';
+                    break;
+                case '622106':
+                    logo.src = 'img/parsian.png';
+                    break;
+                case '627884':
+                    logo.src = 'img/parsian.png';
+                    break;
+                case '603769':
+                    logo.src = 'img/saderat.png';
+                    break;
+                case '628023':
+                    logo.src = 'img/maskan.png';
+                    break;
+                case '627353':
+                    logo.src = 'img/tejarat.png';
+                    break;
+                case '585983':
+                    logo.src = 'img/tejarat.png';
+                    break;
+
+
+                default:
+                    break;
+            }
+
+            console.log(firstSix)
+
+            if (firstSix < 6) {
+                logo.src = ''
+            }
+        })
+    })
+    exp.forEach((val, i) => {
+        val.addEventListener('keyup', (e) => {
+            let myKeyCode = e.keycode || e.which
+            if (myKeyCode == 8) {
+                if (val.value.length == 0) {
+                    if (i != 0) {
+
+                        val.previousElementSibling.focus()
+                    }
+
+                    else {
+                        numb[3].focus()
+                    }
+                }
+            } else {
+                if (val.value.length >= 2) {
+                    val.value = val.value.slice(0, 2)
+                    if (i != 1) {
+                        val.nextElementSibling.focus()
+                    } else {
+                        cvv.focus()
+                    }
+                }
+            }
+            if (i == 0) expCard[0].textContent = val.value;
+            if (i == 1) expCard[2].textContent = val.value;
+
+
+        }
+        )
+    })
+
+    cvv.addEventListener('keyup', (e) => {
+        let myKeyCode = e.keycode || e.which
+        if (myKeyCode == 8) {
+            if (cvv.value.length == 0) {
+
+
+                exp[1].focus()
+            }
+        }
+        else {
+            if (cvv.value.length >= 4) {
+                cvv.value = cvv.value.slice(0, 4)
+            }
+        }
+        cvCard.textContent = cvv.value
+    })
+
+    function getFirstSixDigits() {
+        let firstSix = '';
+
+
+        firstSix += numb[0].value.slice(0, 4);
+
+
+        firstSix += numb[1].value.slice(0, 2);
+
+        return firstSix;
+    }
+
+</script>
+
+</html>
